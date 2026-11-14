@@ -8,6 +8,7 @@ import { FirebaseUserModel } from '../core/user.model';
 
 @Component({
   selector: 'page-user',
+  standalone: false,
   templateUrl: 'user.component.html',
   styleUrls: ['./user.component.css']
 })
