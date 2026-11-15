@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
+  standalone: false,
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

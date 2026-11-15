@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { rootRouterConfig } from './app.routes';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
@@ -14,7 +14,7 @@ import { AuthGuard } from './core/auth.guard';
 import { AuthService } from './core/auth.service';
 import { UserService } from './core/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { AppComponent } from './app.component';
     AppComponent,
     LoginComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,23 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../core/auth.service'
 import { Router, Params } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'page-login',
+  standalone: false,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
 
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
   errorMessage: string = '';
 
   constructor(
     public authService: AuthService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {
     this.createForm();
   }
